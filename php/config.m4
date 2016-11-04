@@ -4,6 +4,9 @@ Make sure that the comment is aligned:
 
 if test "$PHP_STRTOTIME" != "no"; then
   AC_DEFINE(HAVE_STRTOTIME, 1, [ ])
+  
+  LDFLAGS="$LDFLAGS -L../lib -lgnu"
+dnl LDFLAGS="$LDFLAGS -Wl,-whole-archive -Llib -lgnu -Wl,-no-whole-archive"
 
   PHP_NEW_EXTENSION(strtotime, strtotime.c, $ext_shared)
 fi

@@ -5,7 +5,8 @@ Replacement for buggy php function `strtotime`. It uses `parse-datetime` module 
 ## Build
 
 ```
-phpize
+./gnulib/gnulib-tool --import --libtool parse-datetime
+autoreconf --install
 ./configure
 make
 ```
