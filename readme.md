@@ -1,6 +1,6 @@
 # PHP strtotime
 
-Replacement for buggy php function `strtotime`. It uses `parse-date` module from Gnulib.
+Replacement for buggy php function `strtotime`. It uses `parse-datetime` module from Gnulib.
 
 ## Build
 
