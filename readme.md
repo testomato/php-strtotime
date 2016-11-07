@@ -1,6 +1,13 @@
 # PHP strtotime
 
-Replacement for buggy php function `strtotime`. It uses `parse-datetime` module from Gnulib.
+Replacement of buggy php function `strtotime`. It uses `parse-datetime` module from Gnulib.
+
+## Usage
+
+```php
+<?php
+$tommorow = strtotime('+1 day');
+```
 
 ## Build
 
