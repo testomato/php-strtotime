@@ -11,17 +11,18 @@ $tommorow = strtotime2('+1 day');
 
 ## Build
 
+For example on Debian system:
 ```
+apt-get install make autoconf automake autotools-dev libtool gcc bison php5-dev
+
 ./gnulib/gnulib-tool --import --libtool parse-datetime
 autoreconf --install
 ./configure
 make
-```
 
-Add following to `mods-available/strtotime.ini` and run `phpenmod strtotime`.
-
-```
-extension=".../modules/strtotime.so"
+sudo make install
+sudo echo "extension=strtotime.so" > /etc/php5/mods-available/strtotime.ini
+sudo php5enmod strtotime
 ```
 
 ## References
